@@ -1,10 +1,8 @@
 @import "tailwindcss" source(none);
-@source "../src";
 @import "tw-animate-css";
+@source "../src";
 
 @custom-variant dark (&:is(.dark *));
-
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 @theme inline {
   --font-serif: 'Cormorant Garamond', serif;
@@ -44,24 +42,24 @@
 /* PUBLIC theme (default) — Cream, Forest, Terracotta */
 :root {
   --radius: 0.75rem;
-  --cream: oklch(0.965 0.012 80);
-  --forest: oklch(0.24 0.04 155);
-  --terracotta: oklch(0.68 0.15 45);
+  --cream: oklch(0.955 0.018 78);
+  --forest: oklch(0.23 0.045 155);
+  --terracotta: oklch(0.62 0.14 43);
 
-  --background: oklch(0.965 0.012 80);
-  --foreground: oklch(0.24 0.04 155);
-  --card: oklch(0.99 0.008 80);
-  --card-foreground: oklch(0.24 0.04 155);
-  --popover: oklch(0.99 0.008 80);
-  --popover-foreground: oklch(0.24 0.04 155);
-  --primary: oklch(0.24 0.04 155);
-  --primary-foreground: oklch(0.965 0.012 80);
-  --secondary: oklch(0.92 0.018 80);
-  --secondary-foreground: oklch(0.24 0.04 155);
-  --muted: oklch(0.93 0.014 80);
-  --muted-foreground: oklch(0.45 0.03 155);
-  --accent: oklch(0.68 0.15 45);
-  --accent-foreground: oklch(0.99 0.008 80);
+  --background: oklch(0.955 0.018 78);
+  --foreground: oklch(0.23 0.045 155);
+  --card: oklch(0.985 0.01 78);
+  --card-foreground: oklch(0.23 0.045 155);
+  --popover: oklch(0.985 0.01 78);
+  --popover-foreground: oklch(0.23 0.045 155);
+  --primary: oklch(0.23 0.045 155);
+  --primary-foreground: oklch(0.955 0.018 78);
+  --secondary: oklch(0.91 0.022 78);
+  --secondary-foreground: oklch(0.23 0.045 155);
+  --muted: oklch(0.92 0.018 78);
+  --muted-foreground: oklch(0.43 0.032 155);
+  --accent: oklch(0.62 0.14 43);
+  --accent-foreground: oklch(0.985 0.01 78);
   --destructive: oklch(0.6 0.22 27);
   --destructive-foreground: oklch(0.99 0.008 80);
   --border: oklch(0.88 0.02 80);
