@@ -12,9 +12,13 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Terroir & Tech — L'élevage de demain, la transparence d'aujourd'hui" },
-      { name: "description", content: "Ferme éco-responsable : bovins, volailles, porcs, lapins et truites élevés à ciel ouvert. Capteurs en temps réel, click & collect." },
+      { name: "description", content: "Des élevages en plein air, suivis en temps réel, et des produits fermiers en vente directe." },
       { property: "og:title", content: "Terroir & Tech — Élevage augmenté" },
-      { property: "og:description", content: "Une ferme transparente, mesurée et partagée." },
+      { property: "og:description", content: "Des élevages en plein air, suivis en temps réel, et des produits fermiers en vente directe." },
+      { property: "og:image", content: "/images/ferme-cover.png" },
+      { property: "og:image:alt", content: "Élevage en plein air dans une ferme française au lever du soleil" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "/images/ferme-cover.png" },
     ],
   }),
   component: PublicPage,

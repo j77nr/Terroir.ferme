@@ -151,9 +151,18 @@ export function Hero3D() {
   useEffect(() => setMounted(true), []);
   return (
     <section className="relative min-h-screen overflow-hidden pt-16 grain">
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[oklch(0.92_0.04_70)] via-background to-background" />
+      <div aria-hidden="true" className="absolute inset-0 z-0 overflow-hidden">
+        <img
+          src="/images/ferme-cover.png"
+          alt=""
+          fetchPriority="high"
+          className="h-full w-full object-cover object-[58%_center]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/75 to-background/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/15 to-background/10" />
+      </div>
 
-      <div className="absolute inset-0">{mounted && (
+      <div className="absolute inset-0 z-[1] opacity-20">{mounted && (
         <Canvas
           shadows
           dpr={[1, 1.6]}
@@ -170,14 +179,14 @@ export function Hero3D() {
 
       <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-background via-background/30 to-transparent" />
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-10 w-full pt-24 lg:pt-32 pointer-events-none">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 w-full pt-24 lg:pt-32 pointer-events-none">
+        <motion.div initial={false} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
           <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-foreground/70">
             <span className="h-px w-10 bg-accent" /> Saison 2025 · Lot vivant
           </span>
         </motion.div>
         <motion.h1
-          initial={{ opacity: 0, y: 40 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.15 }}
           className="font-serif text-5xl sm:text-7xl lg:text-[7.5rem] leading-[0.95] tracking-tight mt-6 text-balance max-w-5xl drop-shadow-[0_2px_20px_rgba(255,255,255,0.4)]"
@@ -186,14 +195,13 @@ export function Hero3D() {
           <em className="text-accent not-italic font-medium">la Transparence</em> d'Aujourd'hui.
         </motion.h1>
         <motion.p
-          initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.5 }}
+          initial={false} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.5 }}
           className="mt-8 max-w-xl text-lg text-foreground/80 backdrop-blur-[2px]"
         >
-          Bovins, volailles, porcs, lapins et truites élevés à ciel ouvert, capteurs à l'appui.
-          Chaque animal a un nom, chaque parcelle, une histoire mesurée en temps réel.
+          Des élevages en plein air, suivis en temps réel, et des produits fermiers en vente directe.
         </motion.p>
         <motion.div
-          initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }}
+          initial={false} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }}
           className="mt-10 flex flex-wrap gap-4 pointer-events-auto"
         >
           <a href="#ferme" className="rounded-full bg-foreground text-background px-7 py-3.5 text-sm font-medium hover:bg-foreground/90 transition shadow-lg">
@@ -207,7 +215,7 @@ export function Hero3D() {
 
       <motion.a
         href="#ferme"
-        initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.5 }}
+        initial={false} animate={{ opacity: 1 }} transition={{ delay: 1.5 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-xs uppercase tracking-[0.25em] text-foreground/70 z-10"
       >
         Défiler
